@@ -4,11 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="src/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css" integrity="sha512-TD/aL30dNLN0VaHVoh9voFlNi7ZuWQYtV4bkIJv2ulZ8mEEkZJ7IyGvDthMKvIUwzLmPONnjQlAi55HTERVXpw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
 
+    <div id="fullpage">
+        <div class="section s1">
+            
+            <h1>section 1 <a href="#contact"> visit section 3</a></h1>
+            <div class="icon"><a  href="https://github.com/DanielKiss12/fullPageJSTutorial"><img src="images/githubicon.png" alt="githubicon"></a></div>
+            <br>
+
+        </div>
+        <div class="section s2">
+            <div class="slide"><h1>Section 2 Slide 1</h1></div>
+            <div class="slide"><h1>Slide 2</h1></div>
+            <div class="slide"><h1>Slide 3</h1></div>
+        </div>
+        <div class="section s3"><h1>Section 3</h1></div>
+    </div>
+    
+
+
+    <!--<script type="text/javascript" src="src/fullpage.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.js" integrity="sha512-GgeYbSbIufsTDQLCp/zhWN2AJRddt3w9p942+lOS5emAtvRBGo65t2zq8Svq+CIZIo1V1DgA6kHzQTBCH0HiXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     
+    <!-- SCRIPT JEDNA -->
+    <script>
+        new fullpage('#fullpage', {
+        navigation: true, // bocna navigacia (videitelnost sectionov)
+        navigationTooltips: ['home', 'about-us', 'contact'], // nazvy pre bocnu navigaciu (pre jednotlive sekcie)(viditelne ked prechadzame mysou)
+        showActiveTooltip: true, //activujeme aby vzdycky sa dalo vidiet nazov aktivneho sekcia (nie len na hover with mouse)
+
+        autoScrolling: true, // auto scrolling na dalsie sekcie
+        scrollingSpeed: 2000, // za aky cas ma autoscrollovat na dalsiu sekciu (2000=2sec)
+        anchors: ['home', 'about-us', 'contact'], // mena pre jednotlive sekcie ktore sa da aj linkovat
+        sectionsColor: ['#fcba03', '#4BBFC3', '#7BAABE'], //backgournd color pre jednotlive sekcie
+
+        controlArrows: false, //sipka na prepinanie medzi slideamy zmyznu
+        slidesNavigation: true, // prepinanie medzi slideami obnovuje formou, ako navigacia medzi sekciami, ale horizontalne lavo dolu
+        
+
+});
+    </script>
+
+
+
+
+
+
 </body>
+
+
 </html>

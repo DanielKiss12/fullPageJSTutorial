@@ -1,0 +1,33 @@
+h1{
+    text-align: center;
+    color: azure;
+}
+span{
+    background: darkgrey !important;
+}
+.icon {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+  }
+
+.s1{
+    background-image: url('images/img1.jpg');
+    background-size: cover;
+    background-position: center 80%;
+
+
+
+}
+
+.s2{
+    background-image: url('images/img2.jpg');
+    background-size: cover;
+    background-position: center 80%;
+}
+.s3{
+    background-image: url('images/img3.jpg');
+    background-size: cover;
+    background-position: center 80%;
+}
