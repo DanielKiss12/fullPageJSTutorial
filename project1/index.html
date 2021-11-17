@@ -6,51 +6,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="src/fullpage.css" />
     <link rel="stylesheet" type="text/css" href="css.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css" integrity="sha512-TD/aL30dNLN0VaHVoh9voFlNi7ZuWQYtV4bkIJv2ulZ8mEEkZJ7IyGvDthMKvIUwzLmPONnjQlAi55HTERVXpw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css" integrity="sha512-TD/aL30dNLN0VaHVoh9voFlNi7ZuWQYtV4bkIJv2ulZ8mEEkZJ7IyGvDthMKvIUwzLmPONnjQlAi55HTERVXpw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    online fullpage.css
+    -->
+        <title>Document</title>
 </head>
 <body>
 
-    <div id="fullpage">
-        <div class="section s1">
+    <div id="fullpage" >
+        <div class="section s1" id="section1">
             
-            <h1>section 1 <a href="#contact"> visit section 3</a></h1>
-            <div class="icon"><a  href="https://github.com/DanielKiss12/fullPageJSTutorial"><img src="images/githubicon.png" alt="githubicon"></a></div>
+            <h1>section 1 <a href="#thirdpage"> visit section 3</a></h1>
+            <div class="icon"><a  href="https://github.com/DanielKiss12/fullPageJSTutorial"><img src="images/githubicon.png" alt="githubicon" id="git"></a></div>
             <br>
 
         </div>
-        <div class="section s2">
-            <div class="slide"><h1>Section 2 Slide 1</h1></div>
-            <div class="slide"><h1>Slide 2</h1></div>
+        <div class="section s2" id="section2" >
+            <img id="chat" src="images/chat.png" alt="chat" >
+            <div class="slide"><h1>Section 2 Slide 1 </h1></div>
+            <div class="slide">
+                <h1>Slide 2</h1>
+            </div>
             <div class="slide"><h1>Slide 3</h1></div>
         </div>
-        <div class="section s3"><h1>Section 3</h1></div>
+        <div class="section s3" id="section3">
+            <h1>Section 3 </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, commodi?</p>
+        </div>
     </div>
     
 
 
-    <!--<script type="text/javascript" src="src/fullpage.js"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.js" integrity="sha512-GgeYbSbIufsTDQLCp/zhWN2AJRddt3w9p942+lOS5emAtvRBGo65t2zq8Svq+CIZIo1V1DgA6kHzQTBCH0HiXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    
-    <!-- SCRIPT JEDNA -->
+    <script type="text/javascript" src="src/fullpage.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.js" integrity="sha512-GgeYbSbIufsTDQLCp/zhWN2AJRddt3w9p942+lOS5emAtvRBGo65t2zq8Svq+CIZIo1V1DgA6kHzQTBCH0HiXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      online fullpage.js
+    -->
+
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.extensions.min.js" integrity="sha512-v0jjVvFpZqb1BcXhgLbaBDRKwZ09IpWFZL5NHTNbW9MlSjhZihkxEz2uNeMGd6HuK1qnSEL6JdyTr24ZHlgKow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      scripta keby som sy pouzival extension packy
+    -->
+
+
+    <!-- SCRIPT JEDNA BASIC SETUP OTIONS -->
+
+
+
+
+    <!-- SCRIPT DVA ANIMATE WITH CALLBACKS -->
     <script>
         new fullpage('#fullpage', {
-        navigation: true, // bocna navigacia (videitelnost sectionov)
-        navigationTooltips: ['home', 'about-us', 'contact'], // nazvy pre bocnu navigaciu (pre jednotlive sekcie)(viditelne ked prechadzame mysou)
-        showActiveTooltip: true, //activujeme aby vzdycky sa dalo vidiet nazov aktivneho sekcia (nie len na hover with mouse)
 
-        autoScrolling: true, // auto scrolling na dalsie sekcie
-        scrollingSpeed: 2000, // za aky cas ma autoscrollovat na dalsiu sekciu (2000=2sec)
-        anchors: ['home', 'about-us', 'contact'], // mena pre jednotlive sekcie ktore sa da aj linkovat
-        sectionsColor: ['#fcba03', '#4BBFC3', '#7BAABE'], //backgournd color pre jednotlive sekcie
 
-        controlArrows: false, //sipka na prepinanie medzi slideamy zmyznu
-        slidesNavigation: true, // prepinanie medzi slideami obnovuje formou, ako navigacia medzi sekciami, ale horizontalne lavo dolu
-        
+            // -- SCRIPT JEDNA BASIC SETUP OTIONS --
+            navigation: true, // bocna navigacia (videitelnost sectionov)
+            navigationTooltips: ['firstpage', 'secoundpage', 'thirdpage'], // nazvy pre bocnu navigaciu (pre jednotlive sekcie)(viditelne ked prechadzame mysou)
+            showActiveTooltip: true, //activujeme aby vzdycky sa dalo vidiet nazov aktivneho sekcia (nie len na hover with mouse)
 
-});
+            autoScrolling: true, // auto scrolling na dalsie sekcie
+            scrollingSpeed: 1000, // za aky cas ma autoscrollovat na dalsiu sekciu (2000=2sec)
+            anchors: ['firstpage', 'secoundpage', 'thirdpage'], // mena pre jednotlive sekcie ktore sa da aj linkovat
+            sectionsColor: ['#fcba03', '#4BBFC3', '#7BAABE'], //backgournd color pre jednotlive sekcie
+
+            controlArrows: false, //sipka na prepinanie medzi slideamy zmyznu
+            slidesNavigation: true, // prepinanie medzi slideami obnovuje formou, ako navigacia medzi sekciami, ale horizontalne lavo dolu
+
+
+            
+            //afterLoad function  (vykonava ked section uz je na citana/uz ne scrollujem)
+            afterLoad: function(origin, destination, direction){
+                var loadedSection = this;
+
+                //using index
+                if(origin.index == 2){
+                    console.log("Section 3 ended loading");
+                }
+                if(origin.index == 0){
+                    document.querySelector('#section1').querySelector('img').style.left = 0 + 'px';
+                }
+
+                //using anchorLink
+                if(origin.anchor == 'secoundpage'){
+                    console.log("section 2 ended loading");
+                }
+            },
+            
+
+            
+            // onLeave function  (vykonava ked odchadzam zo slideu)
+            onLeave: function(origin, destination, direction){
+                var leavingSection = this;
+
+                //after leaving section 2
+                if(origin.index == 1 && direction =='down'){
+                    console.log("Going to section 3!");
+                }
+
+                else if(origin.index == 1 && direction == 'up'){
+                    console.log("Going to section 1!");
+                }
+                if(destination.index==0 ){
+                    document.querySelector('#section3').querySelector('p').style.opacity = 0;
+                    document.querySelector('#section2').querySelector('img').style.right = -200 + 'px';
+                    document.querySelector('#section1').querySelector('img').style.left = 0 + 'px';
+                }
+                if(destination.index==1){
+                    document.querySelector('#section2').querySelector('img').style.right = 0 + 'px';
+                    document.querySelector('#section3').querySelector('p').style.opacity = 0;
+                    document.querySelector('#section1').querySelector('img').style.left = -200 + 'px';
+                }
+ 
+                if(destination.index==2 ){
+                    document.querySelector('#section3').querySelector('p').style.opacity = 1;
+                    document.querySelector('#section2').querySelector('img').style.right = -200 + 'px';
+                    document.querySelector('#section1').querySelector('img').style.left = -200 + 'px';
+                }
+            },
+            
+
+
+
+            // --FUNKCIE PRE SLIDE--
+
+            /*
+            //afterSlideLoad
+            afterSlideLoad: function( section, origin, destination, direction){
+                var loadedSlide = this;
+
+                //first slide of the second section
+                if(section.anchor == 'secoundpage' && destination.index == 1){
+                   console.log("First slide loaded");
+                }
+
+	        },
+            */
+
+
+            /*
+            //onSlideLeave
+            onSlideLeave: function( section, origin, destination, direction){
+                var leavingSlide = this;
+
+                //leaving the first slide of the 2nd Section to the right
+                if(section.index == 1 && origin.index == 0 && direction == 'right'){
+                    console.log("Leaving the fist slide!!");
+                }
+
+                //leaving the 3rd slide of the 2nd Section to the left
+                if(section.index == 1 && origin.index == 2 && direction == 'left'){
+                    console.log("Going to slide 2! ");
+                }
+            },
+            */
+
+
+            licenseKey: 'YOUR_KEY_HERE',
+    });
     </script>
+
+
 
 
 

@@ -5,6 +5,41 @@ h1{
 span{
     background: darkgrey !important;
 }
+.section{
+    position: relative;
+}
+#chat{
+    position: absolute;
+    bottom: 0;
+
+    right: -200px;
+    margin: 0 auto;
+    transition: all 1200ms ease;
+    width: 200px;
+    height: 200px;
+}
+#git{
+    position: absolute;
+    top: 0;
+    left: -200px;
+    margin: 0 auto;
+    transition: all 1200ms ease;
+    width: 128px;
+    height: 128px;
+}
+p{
+    opacity: 0;
+    transition: all 3000ms ease;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
 .icon {
     position: absolute;
     top: 8px;
