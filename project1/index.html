@@ -24,15 +24,32 @@
         <div class="section s2" id="section2" >
             <img id="chat" src="images/chat.png" alt="chat" >
             <div class="slide"><h1>Section 2 Slide 1 </h1></div>
-            <div class="slide">
+            <div class="slide" id="slide2" >
                 <h1>Slide 2</h1>
+                
             </div>
-            <div class="slide"><h1>Slide 3</h1></div>
+            <div class="slide">
+                <h1>Slide 3</h1>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jvOx0ZnUMjM?mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-autoplay></iframe>
+            </div>
         </div>
         <div class="section s3" id="section3">
             <h1>Section 3 </h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, commodi?</p>
+            <audio controls="" id="audio" data-autoplay>
+                <source src="images/Late Night.mp3" type="audio/mpeg" >
+            </audio>
         </div>
+        <div class="section s4" id="section4">
+            <video id="myVideo" loop data-autoplay>
+                <source src="images/flowers.mp4" type="video/mp4">
+            </video>
+            <div class="layer">
+                <h1>background video</h1>
+            </div>
+
+        </div>
+        <div class="section fp-auto-height"><h3>Here is my footer</h3></div>
     </div>
     
 
@@ -60,17 +77,17 @@
 
             // -- SCRIPT JEDNA BASIC SETUP OTIONS --
             navigation: true, // bocna navigacia (videitelnost sectionov)
-            navigationTooltips: ['firstpage', 'secoundpage', 'thirdpage'], // nazvy pre bocnu navigaciu (pre jednotlive sekcie)(viditelne ked prechadzame mysou)
+            navigationTooltips: ['firstpage', 'secoundpage', 'thirdpage','fourthpage','footer'], // nazvy pre bocnu navigaciu (pre jednotlive sekcie)(viditelne ked prechadzame mysou)
             showActiveTooltip: true, //activujeme aby vzdycky sa dalo vidiet nazov aktivneho sekcia (nie len na hover with mouse)
 
             autoScrolling: true, // auto scrolling na dalsie sekcie
             scrollingSpeed: 1000, // za aky cas ma autoscrollovat na dalsiu sekciu (2000=2sec)
-            anchors: ['firstpage', 'secoundpage', 'thirdpage'], // mena pre jednotlive sekcie ktore sa da aj linkovat
-            sectionsColor: ['#fcba03', '#4BBFC3', '#7BAABE'], //backgournd color pre jednotlive sekcie
+            anchors: ['firstpage', 'secoundpage', 'thirdpage','fourthpage','footer'], // mena pre jednotlive sekcie ktore sa da aj linkovat
+            sectionsColor: ['#fcba03', '#4BBFC3', '#7BAABE', '#ffffff','#808a83'], //backgournd color pre jednotlive sekcie
 
             controlArrows: false, //sipka na prepinanie medzi slideamy zmyznu
             slidesNavigation: true, // prepinanie medzi slideami obnovuje formou, ako navigacia medzi sekciami, ale horizontalne lavo dolu
-
+            verticalCentered: true,
 
             
             //afterLoad function  (vykonava ked section uz je na citana/uz ne scrollujem)
@@ -89,6 +106,14 @@
                 if(origin.anchor == 'secoundpage'){
                     console.log("section 2 ended loading");
                 }
+                if(destination.index==1){
+                    document.querySelector('#section2').querySelector('img').style.right = 0 + 'px';
+                }
+
+                if(destination.index==2){
+                    document.querySelector('#section3').querySelector('audio').volume=0.1;
+                }
+
             },
             
 
@@ -111,7 +136,7 @@
                     document.querySelector('#section1').querySelector('img').style.left = 0 + 'px';
                 }
                 if(destination.index==1){
-                    document.querySelector('#section2').querySelector('img').style.right = 0 + 'px';
+                    document.querySelector('#section2').querySelector('img').style.right = 100 + 'px';
                     document.querySelector('#section3').querySelector('p').style.opacity = 0;
                     document.querySelector('#section1').querySelector('img').style.left = -200 + 'px';
                 }
@@ -128,7 +153,7 @@
 
             // --FUNKCIE PRE SLIDE--
 
-            /*
+            
             //afterSlideLoad
             afterSlideLoad: function( section, origin, destination, direction){
                 var loadedSlide = this;
@@ -138,11 +163,14 @@
                    console.log("First slide loaded");
                 }
 
+                if(section.index == 1 && destination.index == 2){
+                    document.querySelector('#section2').querySelector('iframe').style.bottom=10 + '%';
+                }
 	        },
-            */
+            
 
 
-            /*
+            
             //onSlideLeave
             onSlideLeave: function( section, origin, destination, direction){
                 var leavingSlide = this;
@@ -152,16 +180,17 @@
                     console.log("Leaving the fist slide!!");
                 }
 
-                //leaving the 3rd slide of the 2nd Section to the left
-                if(section.index == 1 && origin.index == 2 && direction == 'left'){
-                    console.log("Going to slide 2! ");
+                //leaving the 2rd slide of the 2nd Section to the right
+                if(section.index == 1 && origin.index == 1 && direction == 'right'){
+                    document.querySelector('#section2').querySelector('iframe').style.bottom=10 + '%';
                 }
             },
-            */
+            
 
 
             licenseKey: 'YOUR_KEY_HERE',
     });
+
     </script>
 
 

@@ -2,6 +2,12 @@ h1{
     text-align: center;
     color: azure;
 }
+h3{
+    text-align: center;
+    color: azure;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 span{
     background: darkgrey !important;
 }
@@ -14,7 +20,7 @@ span{
 
     right: -200px;
     margin: 0 auto;
-    transition: all 1200ms ease;
+    transition: all 1000ms ease-in-out;
     width: 200px;
     height: 200px;
 }
@@ -46,6 +52,12 @@ p{
     left: 8px;
 
   }
+audio{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+}
 
 .s1{
     background-image: url('images/img1.jpg');
@@ -55,6 +67,7 @@ p{
 
 
 }
+
 
 .s2{
     background-image: url('images/img2.jpg');
@@ -66,3 +79,49 @@ p{
     background-size: cover;
     background-position: center 80%;
 }
+iframe{
+    position: absolute;
+    bottom: -50%;
+    left: 78.5%;
+    margin: 0 auto;
+    transition: all 1200ms ease;
+}
+
+
+#myVideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+     background-color: black; /* in case the video doesn't fit the whole page*/
+
+      background-position: center center;
+      background-size: contain;
+       object-fit: cover; /*cover video background */
+       z-index:3;
+}
+#section4 .layer{
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    left: 0;
+    top: 43%;
+
+    /*
+    * Preventing flicker on some browsers
+    * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+    */
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+/*solves problem with overflowing video in Mac with Chrome */
+#section4{
+    overflow: hidden;
+}
+
+
