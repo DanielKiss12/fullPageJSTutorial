@@ -30,14 +30,14 @@
             </div>
             <div class="slide">
                 <h1>Slide 3</h1>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/jvOx0ZnUMjM?mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-autoplay></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jvOx0ZnUMjM?mute=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-autoplay></iframe>
             </div>
         </div>
         <div class="section s3" id="section3">
             <h1>Section 3 </h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, commodi?</p>
             <audio controls="" id="audio" data-autoplay>
-                <source src="images/Late Night.mp3" type="audio/mpeg" >
+                <source src="images/Late_Night.mp3" type="audio/mpeg" >
             </audio>
         </div>
         <div class="section s4" id="section4">
@@ -54,7 +54,7 @@
     
 
 
-    <script type="text/javascript" src="src/fullpage.js"></script>
+    <script src="src/fullpage.js"></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.js" integrity="sha512-GgeYbSbIufsTDQLCp/zhWN2AJRddt3w9p942+lOS5emAtvRBGo65t2zq8Svq+CIZIo1V1DgA6kHzQTBCH0HiXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       online fullpage.js
     -->
@@ -87,7 +87,6 @@
 
             controlArrows: false, //sipka na prepinanie medzi slideamy zmyznu
             slidesNavigation: true, // prepinanie medzi slideami obnovuje formou, ako navigacia medzi sekciami, ale horizontalne lavo dolu
-            verticalCentered: true,
 
             
             //afterLoad function  (vykonava ked section uz je na citana/uz ne scrollujem)
@@ -118,7 +117,7 @@
             
 
             
-            // onLeave function  (vykonava ked odchadzam zo slideu)
+            // onLeave function  (vykonava ked odchadzam zo section)
             onLeave: function(origin, destination, direction){
                 var leavingSection = this;
 
